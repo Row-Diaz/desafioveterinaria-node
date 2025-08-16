@@ -1,4 +1,5 @@
 const fs = require("fs");
+// funcion para registrar los datos de los pacientes 🐶🐈
 
 function registrar(nombre, edad, animal, color, enfermedad) {
   const registro = {
@@ -15,12 +16,13 @@ function registrar(nombre, edad, animal, color, enfermedad) {
   fs.writeFileSync("citas.json", JSON.stringify(cita));
 }
 
-function leer(){
-    const formularios = fs.readFileSync('citas.json', 'utf8')
-    JSON.parse(formularios).forEach(mascota => {
-        console.log(mascota)
-    });
+// funcion para mostrar por consola todas las citas registradas de los pacientes 🐶🐈
 
+function leer() {
+  const formularios = fs.readFileSync("citas.json", "utf8");
+  JSON.parse(formularios).forEach((mascota) => {
+    console.log(mascota);
+  });
 }
 
-module.exports= { registrar, leer };
+module.exports = { registrar, leer };
