@@ -20,8 +20,8 @@ function registrar(nombre, edad, animal, color, enfermedad) {
 
 function leer() {
   const formularios = fs.readFileSync("citas.json", "utf8");
-  JSON.parse(formularios).forEach((mascota) => {
-    console.log(mascota);
+  JSON.parse(formularios).forEach((informacion) => {
+    console.log(informacion);
   });
 }
 
